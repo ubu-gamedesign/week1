@@ -1,4 +1,16 @@
 polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 select -r pSpherel ;
 rename "pSphere3" "myball";
-
+ move -r 0 4 0;
+ scale -r 4 4 4 ;
+ select -tgl myball.f[254] ;
+select -add myball.f[240:259] ;
+doDelete;
+select -r myball.e[274] ;
+select -tgl myball.e[275] ;
+select -add myball.e[260:279] ;
+scale -r -p -3.52391e-07cm 10.144861cm -4.69855e-07cm 0.757177 0.757177 0.757177 ;
+select -r myball.e[253] ;
+select -tgl myball.e[252] ;
+select -add myball.e[240:259] ;
+scale -r -p -3.52391e-07cm 10.144861cm -4.69855e-07cm 0.757177 0.757177 0.757177 ;
