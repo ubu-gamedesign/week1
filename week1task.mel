@@ -23,3 +23,15 @@ select -add myball.e[240:259] ;
 polyBridgeEdge -ch 1 -divisions 0 -twist 0 -taper 1 -curveType 0 -smoothingAngle 30 -direction 0 -sourceDirection 0 -targetDirection 0;
 // Result: polyBridgeEdge1
 rename "myball" "myvase";
+select -r myvase ;
+polySplit -ch 1 -sma 180 -ep 620 0.220389 -ep 639 0.220389 -ep 638 0.220389 -ep 637 0.220389 -ep 636 0.220389 -ep 635 0.220389 -ep 634 0.220389 -ep 633 0.220389 -ep 632 0.220389 -ep 631 0.220389 -ep 630 0.220389 -ep 629 0.220389 -ep 628 0.220389 -ep 627 0.220389 -ep 626 0.220389 -ep 625 0.220389 -ep 624 0.220389 -ep 623 0.220389 -ep 622 0.220389 -ep 621 0.220389 -ep 620 0.220389 |myvase|myvaseShape;  select -cl;
+polySplit -ch 1 -sma 180 -ep 780 0.0606926 -ep 781 0.0606926 -ep 782 0.0606926 -ep 783 0.0606926 -ep 784 0.0606926 -ep 785 0.0606926 -ep 786 0.0606926 -ep 787 0.0606926 -ep 788 0.0606926 -ep 789 0.0606926 -ep 790 0.0606926 -ep 791 0.0606926 -ep 792 0.0606926 -ep 793 0.0606926 -ep 794 0.0606926 -ep 795 0.0606926 -ep 796 0.0606926 -ep 797 0.0606926 -ep 798 0.0606926 -ep 799 0.0606926 -ep 780 0.0606926 |myvase|myvaseShape;  select -cl;
+select -tgl myvase.f[417] ;
+select -tgl myvase.f[416] ;
+select -add myvase.f[400:419] ;
+doDelete;
+select -r myvase ;
+SeparatePolygon;
+ polySeparate -ch 1 myvaseShape;
+// polySurface1 polySurface2 polySeparate1
+move -r 5.099133 0 0 ;
