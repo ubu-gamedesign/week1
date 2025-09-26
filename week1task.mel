@@ -57,3 +57,6 @@ polyCloseBorder -ch 1 pGear4.e[1218] pGear4.e[1220] pGear4.e[1222] pGear4.e[1224
 // Result: polyCloseBorder1
 rotate -r -os -fo 0 0 -180 ;
 move -r -os -wd 0 -5.835141 0 ;
+rotate -r -ws -fo 0.750507 -17.177532 47.497082 ;
+move -r -os -wd 0 6.359784 0 ;
+print "end of code";
