@@ -35,3 +35,25 @@ SeparatePolygon;
  polySeparate -ch 1 myvaseShape;
 // polySurface1 polySurface2 polySeparate1
 move -r 5.099133 0 0 ;
+select -r pGear1 ;
+select -tgl Binx4 ;
+CombinePolygons;
+polyUnite -ch 1 -mergeUVSets 1 -centerPivot -name pGear1 pGear1 Binx4;
+// Result: pGear3 polyUnite1
+select -r pGear4 ;
+select -r pGear4.e[971] ;
+select -tgl pGear4.e[968] ;
+select -add pGear4.e[940] pGear4.e[944] pGear4.e[947] pGear4.e[950] pGear4.e[953] pGear4.e[956] pGear4.e[959] pGear4.e[962] pGear4.e[965] pGear4.e[968] pGear4.e[971] pGear4.e[974] ;
+hilite pGear4.e[940] pGear4.e[944] pGear4.e[947] pGear4.e[950] pGear4.e[953] pGear4.e[956] pGear4.e[959] pGear4.e[962] pGear4.e[965] pGear4.e[968] pGear4.e[971] pGear4.e[974] ;
+selectMode -component ;
+select -r pGear4.e[940] pGear4.e[944] pGear4.e[947] pGear4.e[950] pGear4.e[953] pGear4.e[956] pGear4.e[959] pGear4.e[962] pGear4.e[965] pGear4.e[968] pGear4.e[971] pGear4.e[974] ;
+polyExtrudeEdge -constructionHistory 1 -keepFacesTogether 1 -pvx -0.1305537149 -pvy 5.783248425 -pvz 0.03940148652 -divisions 1 -twist 0 -taper 1 -offset 0 -thickness 0 -smoothingAngle 30 pGear4.e[940] pGear4.e[944] pGear4.e[947] pGear4.e[950] pGear4.e[953] pGear4.e[956] pGear4.e[959] pGear4.e[962] pGear4.e[965] pGear4.e[968] pGear4.e[971] pGear4.e[974];
+// Result: polyExtrudeEdge1
+setAttr "polyExtrudeEdge1.translate" -type double3 0 10.362149 0 ;
+select -r pGear4.e[1224] ;
+select -tgl pGear4.e[1222] ;
+select -add pGear4.e[1218] pGear4.e[1220] pGear4.e[1222] pGear4.e[1224] pGear4.e[1226] pGear4.e[1228] pGear4.e[1230] pGear4.e[1232] pGear4.e[1234] pGear4.e[1236] pGear4.e[1238:1239] ;
+polyCloseBorder -ch 1 pGear4.e[1218] pGear4.e[1220] pGear4.e[1222] pGear4.e[1224] pGear4.e[1226] pGear4.e[1228] pGear4.e[1230] pGear4.e[1232] pGear4.e[1234] pGear4.e[1236] pGear4.e[1238:1239];
+// Result: polyCloseBorder1
+rotate -r -os -fo 0 0 -180 ;
+move -r -os -wd 0 -5.835141 0 ;
