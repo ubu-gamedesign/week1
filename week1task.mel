@@ -14,3 +14,12 @@ select -r myball.e[253] ;
 select -tgl myball.e[252] ;
 select -add myball.e[240:259] ;
 scale -r -p -3.52391e-07cm 10.144861cm -4.69855e-07cm 0.757177 0.757177 0.757177 ;
+select -tgl myball.e[271] ;
+select -tgl myball.e[272] ;
+select -add myball.e[260:279] ;
+select -tgl myball.e[251] ;
+select -tgl myball.e[252] ;
+select -add myball.e[240:259] ;
+polyBridgeEdge -ch 1 -divisions 0 -twist 0 -taper 1 -curveType 0 -smoothingAngle 30 -direction 0 -sourceDirection 0 -targetDirection 0;
+// Result: polyBridgeEdge1
+rename "myball" "myvase";
